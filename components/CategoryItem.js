@@ -1,42 +1,47 @@
-import React from 'react'
-import { View, Text,TouchableOpacity , StyleSheet} from 'react-native'
+import React from "react";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-export default function CategoryItem(props) {
-    return (
-        <TouchableOpacity onPress={props.onSelectItem}>
-      <View style={styles.ShopItem}>
-        <View style={{ ...styles.tripRow, ...styles.shopHeader }}>
-          <Text>{props.title}</Text>
-        </View>
-        <View style={{ ...styles.shopRow, ...styles.shopDetail }}>
-          <Text>Price: {props.price}</Text>
-          <Text>Title: {props.title.toUpperCase()}</Text>
-
-        </View>
+const CountryGridTile = (props) => {
+  return (
+    <TouchableOpacity style={styles.gridItem} onPress={props.onSelect}>
+      {/* 1. Add style - view and text */}
+      <View style={{ ...styles.container, backgroundColor: props.imageUrl }}>
+        <Text style={styles.title}>{props.title}</Text>
       </View>
     </TouchableOpacity>
-    )
-}
-
+  );
+};
 
 const styles = StyleSheet.create({
-  ShopItem: {
-      height: 200,
-      width: "100%",
-      backgroundColor: "#ccc",
-      borderRadius: 10,
-      overflow: "hidden",
-    },
-    shopRow: {
-      flexDirection: "row",
-    },
-    shopHeader: {
-      height: "85%",
-    },
-    shopDetail: {
-      paddingHorizontal: 10,
-      justifyContent: "space-between",
-      alignItems: "center",
-      height: "15%",
-    },
-  });
+  screen: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  gridItem: {
+    flex: 1,
+    margin: 15,
+    height: 150,
+  },
+
+  // 2. Add style to container:
+  container: {
+    flex: 1,
+    borderRadius: 15,
+    shadowColor: "black",
+    shadowOpacity: 0.6,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 10,
+    elevation: 3, // for android
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
+  },
+  // 3. Add style to title:
+  title: {
+    fontFamily: "pattaya-regular",
+    fontSize: 22,
+    margin: 10,
+  },
+});
+
+export default CountryGridTile;

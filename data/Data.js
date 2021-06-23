@@ -1,6 +1,6 @@
 import Category from "../models/Category";
 
-export const Category = [
+export const CATEGORY = [
   new Category("T-shirt", "T-Shirt"),
   new Category("shirt", "Shirt"),
   new Category("sweat-shirt", "Sweat shirt"),
