@@ -4,6 +4,7 @@ class Category {
     this.name = name;
   }
 }
+export default Category
 
 class Item {
   constructor(id, title, price, imageUrl) {
@@ -13,3 +14,5 @@ class Item {
     this.imageUrl = imageUrl;
   }
 }
+
+export default Item
