@@ -5,8 +5,8 @@ import HomeScreen from "../screens/HomeScreen";
 import ItemScreen from "../screens/ItemScreen";
 import CartScreen from "../screens/CartScreen";
 import ListCategoryScreen from "../screens/ListCategoryScreen";
-import Color from "../constants/Color";
 import { Platform } from "react-native";
+import Colors from "../constants/Colors";
 
 const Navigation = createStackNavigator(
   {
@@ -19,10 +19,10 @@ const Navigation = createStackNavigator(
   {
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: Platform.OS === "android" ? Color.primary : "",
+        backgroundColor: Platform.OS === "android" ? Colors.primary : "",
       },
       headerTintColor: {
-        backgroundColor: Platform.OS === "android" ? "white" : Color.primary,
+        backgroundColor: Platform.OS === "android" ? "white" : Colors.primary,
       },
     },
   }

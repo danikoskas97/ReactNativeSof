@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
-import Color from "../constants/Color";
+
+import Colors from "../constants/Colors";
 
 export default function CartScreen(props) {
   return (
@@ -12,6 +13,6 @@ export default function CartScreen(props) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Color.primary,
+    backgroundColor: Colors.primary,
   },
 });

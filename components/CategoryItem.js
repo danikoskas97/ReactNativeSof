@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-const CountryGridTile = (props) => {
+const CategoryItem = (props) => {
   return (
     <TouchableOpacity style={styles.gridItem} onPress={props.onSelect}>
       {/* 1. Add style - view and text */}
@@ -38,10 +38,9 @@ const styles = StyleSheet.create({
   },
   // 3. Add style to title:
   title: {
-    fontFamily: "pattaya-regular",
     fontSize: 22,
     margin: 10,
   },
 });
 
-export default CountryGridTile;
+export default CategoryItem;

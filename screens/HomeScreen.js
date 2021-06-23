@@ -2,18 +2,18 @@ import React from "react";
 import { StyleSheet, FlatList } from "react-native";
 import CategoryItem from "../components/CategoryItem";
 import { CATEGORY } from "../data/Data";
-import Color from "../constants/Color";
+import Colors from "../constants/Colors";
 export default function HomeScreen(props) {
   const renderGridItem = (itemData) => {
     return (
       <CategoryItem
-        title={itemData.item.title}
-        color={itemData.item.color}
+        title={itemData.item.name}
+        id={itemData.item.id}
         onSelect={() => {
           props.navigation.navigate({
             routeName: "ListCategoryScreen",
             params: {
-              CategoryItemId: itemData.item.id,
+              itemId: itemData.item.categoryIds,
             },
           });
         }}
@@ -30,8 +30,8 @@ export default function HomeScreen(props) {
   );
 }
 
-HomeScreen.navigationOption = {
-  headerTitle: "Home Screens",
+HomeScreen.navigationOptions = {
+  headerTitle: "Your Native Shop",
 };
 
 const styles = StyleSheet.create({
